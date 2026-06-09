@@ -3,9 +3,23 @@
   <head>
     <title>Mon site</title>
   </head>
-  <body style="background-color: blue; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
-    <button style="background-color: white; padding: 20px 40px; font-size: 18px; border: none; border-radius: 8px; cursor: pointer;">
+  <body style="background-color: blue; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; margin: 0; gap: 20px;">
+    
+    <p id="compteur" style="color: white; font-size: 30px; font-family: Arial;">
+      0 clic
+    </p>
+
+    <button onclick="compter()" style="background-color: white; padding: 20px 40px; font-size: 18px; border: none; border-radius: 8px; cursor: pointer;">
       Cliquez ici
     </button>
+
+    <script>
+      let nb = 0;
+      function compter() {
+        nb++;
+        document.getElementById("compteur").textContent = nb + " clic" + (nb > 1 ? "s" : "");
+      }
+    </script>
+
   </body>
 </html>
