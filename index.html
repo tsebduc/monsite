@@ -19,7 +19,7 @@
       transition: transform 0.1s;
     "></div>
 
-    <script>
+    <    <script>
       let nb = 0;
       function compter() {
         nb++;
@@ -27,7 +27,13 @@
         const b = document.getElementById("interrupteur");
         b.style.transform = "scale(0.9)";
         setTimeout(() => b.style.transform = "scale(1)", 100);
+        if (nb === 100) {
+          document.getElementById("slabel").textContent = "Laurianne la plus belle";
+          document.getElementById("slabel").style.fontSize = "22px";
+        }
       }
+    </script>
+
     </script>
     <img src="IMG_7892.webp" style="
       position: fixed;
@@ -35,8 +41,7 @@
       left: 20px;
       width: 150px;
       border-radius: 10px;
-    ">
-    <p style="
+    ">    <p id="slabel" style="
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -45,6 +50,7 @@
       font-family: Arial;
       margin: 0;
     ">S+L</p>
+
 
   </body>
 </html>
